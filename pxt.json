@@ -1,0 +1,22 @@
+{
+    "name": "PTestMatrix",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microturtle": "github:microsoft/pxt-microturtle#v0.0.9"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "custom.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "tsprj"
+}
