@@ -1,22 +1,34 @@
 {
-    "name": "PTestMatrix",
-    "description": "",
+    "name": "neopixel",
+    "version": "0.6.39",
+    "description": "AdaFruit NeoPixel driver",
+    "license": "MIT",
     "dependencies": {
         "core": "*",
-        "radio": "*",
-        "microturtle": "github:microsoft/pxt-microturtle#v0.0.9"
+        "ws2812b": "github:Microsoft/pxt-ws2812b#v0.0.4"
     },
     "files": [
-        "main.blocks",
-        "main.ts",
         "README.md",
-        "custom.ts"
+        "neopixel.ts",
+        "_locales/ja/neopixel-strings.json",
+        "_locales/de/neopixel-strings.json",
+        "_locales/de/neopixel-jsdoc-strings.json",
+        "_locales/fr/neopixel-strings.json",
+        "_locales/fr/neopixel-jsdoc-strings.json"
     ],
     "testFiles": [
-        "test.ts"
+        "neotest.ts"
     ],
-    "supportedTargets": [
-        "microbit"
-    ],
-    "preferredEditor": "tsprj"
+    "yotta": {
+        "config": {
+            "microbit-dal": {
+                "bluetooth": {
+                    "enabled": 0
+                }
+            }
+        }
+    },
+    "public": true,
+    "preferredEditor": "tsprj",
+    "installedVersion": "workspace:3b17115b-8933-4464-6ef4-425d186d4178"
 }
