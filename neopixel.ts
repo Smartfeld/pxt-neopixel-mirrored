@@ -159,13 +159,15 @@ namespace neopixel {
         //% y.min=0 y.max=15
         //% group="matrix" weight=60
         setMatrixColor_x_y(x: number, y: number, rgb: number) {
-            if ((x >= 0 && x <= 15) && (y >= 0 && y <= 15)) {
+            let x_m = 15 - x;
+            let y_m = 15 - y; 
+            if ((x_m >= 0 && x_m <= 15) && (y_m >= 0 && y_m <= 15)) {
                 let i = 0;
-                if (!(y % 2)) {
-                    i = ((y + 1) * 16) - x - 1;
+                if (!(y_m % 2)) {
+                    i = ((y_m + 1) * 16) - x_m - 1;
                 }
                 else {
-                    i = (y * 16) + x;
+                    i = (y_m * 16) + x_m;
                 }
                 this.setPixelColor(i, rgb);
             }
